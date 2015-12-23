@@ -289,13 +289,11 @@ The training option works similar to the previous one with the difference that t
           
           if (sumPeaks < INTESITY_THRESHOLD){
             brainManager.train(BPNInput, false);
-           // System.out.println("Train negative");
           }
           
         }else{
           if (sumPeaks > INTESITY_THRESHOLD){
             brainManager.train(BPNInput, true);
-            //System.out.println("Train positive");
           }
           
         }
