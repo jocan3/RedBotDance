@@ -8,11 +8,12 @@ The solution in this folder is intended to be uploaded into the RedBot's chip us
 
 ```c++
 #include <RedBot.h>
-
 RedBotMotors motors;
 ```
 
-It 
+It reads characters from serial port 9600 where a bluetooth module is supposed to be connnected
+
+For more information on how to get the hardware and working with Arduino, please see the [Dancing RedBot instructable](http://www.instructables.com/id/Dancing-RedBot/?ALLSTEPS).
 
 
 
