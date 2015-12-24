@@ -11,7 +11,7 @@ The solution in this folder is intended to be uploaded into the RedBot's chip us
 RedBotMotors motors;
 ```
 
-It reads characters from serial port 9600 representing commands received through a bluetooth module. These commands will make the RedBot to move in four different ways: up, down, left and right. In order to read the from the serial port it needs to be initialized, checked for availability and read the value into a char.
+It reads characters from serial port 9600 representing commands received through a bluetooth module. These commands will make the RedBot to move in four different ways: up, down, left and right. In order to read the command from the serial port it needs to be initialized, checked for availability and read the value into a char.
 
 ```c++
 Serial.begin(9600);
@@ -58,7 +58,7 @@ The BPN class implements a Back Propagation Network with the attributes required
         layers[numHiddenLayers+1]= outputUnits= new Layer(this.numOutputUnits,this.numUnitsHiddenLayer);
         expectedOutput = new double [this.numOutputUnits];
         
-        //wights generated randomly each time a BPN is created
+        //weights generated randomly each time a BPN is created
         Calendar c = new GregorianCalendar();
         Random random = new Random(c.get(Calendar.SECOND));
         int sign= random.nextInt(2);
@@ -81,7 +81,7 @@ The BPN class implements a Back Propagation Network with the attributes required
     }
 ```
 
-The main methods of the BPN are the ones to propagate a Layer (calculating the result of each unit as the sum of all the input links multiplied by the respective weights and to adjust weights when the network is being trained based on a pre-calculated error. Note that this model of BPN is generic and no problem-specific.
+The main methods of the BPN are the ones to propagate a Layer (calculating the result of each unit as the sum of all the input links multiplied by the respective weights) and to adjust weights when the network is being trained based on a pre-calculated error. Note that this model of BPN is generic and no problem-specific.
 
 ```java
  public void propagateLayer(Layer lower, Layer upper){
@@ -136,7 +136,7 @@ The main methods of the BPN are the ones to propagate a Layer (calculating the r
     }
 ```
 
-The BPNManager handles the BPN specifically for this project in terms of sound inputs, returning one single output and training the network to recognize sound intensity patterns. The move method calls the BPN feed forward process to determine if the sound pattern received can be considered to perform a move and.
+The BPNManager handles the BPN specifically for this project in terms of sound inputs, returning one single output and training the network to recognize sound intensity patterns. The move method calls the BPN feed forward process to determine if the sound pattern received can be considered to perform a move.
 
 ```java
     public double move(double [] input){
