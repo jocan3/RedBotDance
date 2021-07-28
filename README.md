@@ -1,9 +1,9 @@
-#RedBotDance - BPN Neural Network to learn music patterns and control a dancing robot!
+# RedBotDance - BPN Neural Network to learn music patterns and control a dancing robot!
 
 The code in this repository allows you to control a RedBot (Sparkfun robot) using an Android application. This app is able to train and use a Back Propagation Neural Network that can hear sound patterns and move accordingly.
 
 
-##RedBotDance-Motors
+## RedBotDance-Motors
 The solution in this folder is intended to be uploaded into the RedBot's chip using the Arduino IDE. It uses the library RedBot.h designed to work with this robot and control the two motors.
 
 ```c++
@@ -28,7 +28,7 @@ inChar = (char)Serial.read();
 For more information on how to get the hardware and working with Arduino, please see the [Dancing RedBot instructable](http://www.instructables.com/id/Dancing-RedBot/?ALLSTEPS).
 
 
-##RedBotDance (Android-Processing app)
+## RedBotDance (Android-Processing app)
 
 In the RedBotDance folder you can see the code of the Android application built using Processing IDE and the [Android mode](http://madrid.verkstad.cc/en/course-literature/processing-android-mode/). The files include the main program, a Back Propagation Network and a class to manage the BPN (linking the main program and the neural network).
 
@@ -305,7 +305,3 @@ The training option works similar to the previous one with the difference that t
 ```
 
 You can download the apk of the Android application [here](https://drive.google.com/file/d/0By8PJeonJB8DU0Z0WUgwdDJmdG8/view?usp=sharing).
-
-
-
-
